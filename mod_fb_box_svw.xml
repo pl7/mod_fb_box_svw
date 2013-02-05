@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+    <!-- Name of the Module -->
+	<name>Facebook Box Plugin für die Facebook Seite des SV Wiesbaden 1899 e.V.</name> 
+ 
+    <!-- Name of the Author -->
+	<author>Pascal Link</author> 
+ 
+    <!-- Version Date of the Module -->
+	<creationDate>2012-10-16</creationDate> 
+ 
+    <!-- Copyright information -->
+	<copyright>All rights reserved by Pascal Link (C) 2012.</copyright> 
+ 
+    <!-- License Information -->
+	<license>GPL 2.0</license> 
+ 
+    <!-- Author's email address -->
+	<authorEmail>pascal.link@pl07.de</authorEmail> 
+ 
+    <!-- Author's website -->
+	<authorUrl>http://www.pl07.de</authorUrl> 
+ 
+    <!-- Module version number -->
+	<version>1.0.0</version> 
+ 
+    <!-- Description of what the module does -->
+	<description>Displays a facebook box plugin of the stream of the facebook site of svwiesbaden. See http://facebook.com/svwiesbaden</description>
+ 
+    <!-- Listing of all files that should be installed for the module to function -->
+	<files>
+        <!-- The "module" attribute signifies that this is the main controller file -->
+		<filename module="mod_fb_box_svw">mod_fb_box_svw.php</filename>
+		<filename>index.html</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+ 
+    <!-- Optional parameters -->
+	<config>
+            <fields name="params">
+                <fieldset name="basic">
+                    <field 
+                        name="pluginWidth" 
+                        type="text" 
+                        default="" 
+                        label="Breite" 
+                        description="Breite der Plugins">
+                    </field>
+                     <field 
+                        name="@spacer" 
+                        type="spacer" 
+                        default="" 
+                        label="" 
+                        description="">
+                    </field>
+                    <field 
+                        name="fbBox" 
+                        type="radio" 
+                        default="0" 
+                        label="'Facebook box' anzeigen" 
+                        description="Breite der Plugins">
+            			<option
+            				value="0">JNO</option>
+            			<option
+            				value="1">JYES</option>
+                    </field>
+                </fieldset>
+            </fields>
+    </config>
+</extension>
